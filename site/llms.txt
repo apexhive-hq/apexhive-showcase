@@ -20,9 +20,9 @@
    - GitHub: https://github.com/apexhive-hq/open-center-os
 
 ## 1 Hosted Cloud Flagship (#6)
-6. `evalshield-copilot`: Human-in-the-loop futures & prop-firm evaluation risk shield (`INTRADAY_TRAILING`, `EOD_TRAILING`, `STATIC`, 8 CME contracts + micro fallbacks, 4 broker CSV adapters, `node:sqlite` WAL, 10,000-run Monte Carlo). Strictly read-only: zero broker API keys and zero automated order placement.
+6. `evalshield-copilot` (`v3.0.2`, ApexHive Dual License — Solo 0 USDC Forever · Commercial Team 99 USDC / Enterprise 499 USDC): Human-in-the-loop cross-market futures & prop-firm risk shield covering Topstep, Apex, MFFU, FTMO (1&2-Step), and Tradeify across CME Futures (`ES/NQ/GC/CL`), Gold (`XAUUSD` rollover R-drag), FX, and Crypto Perps (`BTC/ETH/SOL`), with Cross-Account Anti-Hedge Portfolio Guard, Pre-Trade Thesis Journal (`node:sqlite` WAL), Hyperliquid/Polymarket 15s Brief, rolling multi-year macro blackout calendar, 25k-run Monte Carlo, and 1-click self-host `deploy/cloudflare-byo/` kit. Strictly read-only: zero broker API keys and zero automated order placement.
    - Hosted Cloud Flagship: https://evalshield-copilot.apexhive-hq.workers.dev/
-   - GitHub (MIT Core): https://github.com/apexhive-hq/evalshield-copilot
+   - GitHub (Dual License): https://github.com/apexhive-hq/evalshield-copilot
 
 ## Internal R&D Note
 - `polymarket-paper`: Internal, strictly read-only `$0`-capital research collector using a SHA-256 hash-chained simulation ledger and Brier calibration benchmarks. Not a public commercial or custody product.

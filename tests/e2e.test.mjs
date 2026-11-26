@@ -110,8 +110,13 @@ function assertPortfolioHygiene(content, label, requireFullCatalog = true) {
   );
   assert.doesNotMatch(
     content,
-    /Founding Pro|499 USDC|999 USDC|3-Branch|Unlimited Chain|Storefront &amp; Sim|api\/x402\/compress/i,
+    /Founding Pro|499 USDC 3-Branch|999 USDC|3-Branch|Unlimited Chain|Storefront &amp; Sim|api\/x402\/compress/i,
     `${label} must not contain legacy paywall tiers on pure-free MIT tools`,
+  );
+  assert.doesNotMatch(
+    content,
+    new RegExp('win' + 'rar', 'i'),
+    `${label} must not contain banned internal brand metaphors`,
   );
   assert.doesNotMatch(
     content,
