@@ -7,7 +7,6 @@ Static Cloudflare Pages showcase (`https://apexhive-showcase.pages.dev`) for **A
 - [`site/index.html`](./site/index.html) — Interactive `slimmcp-proxy` MCP Context Tax Calculator (models both `97.86%` initial schema reduction and `~95.1%` net 1-turn lookup savings) + 5 pure-free MIT repos + `evalshield-copilot` Cloud Flagship + `polymarket-paper` R&D note
 - [`site/llms.txt`](./site/llms.txt) — Machine-readable summary of all ApexHive Labs tools and links
 - [`site/robots.txt`](./site/robots.txt) — Search & agent crawler rules
-- [`launch-pack/`](./launch-pack/) — Directory submission checklists and verified PR plans
 
 ## Quickstart & Local Verification
 
