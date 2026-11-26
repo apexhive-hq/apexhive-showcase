@@ -1,41 +1,42 @@
-# ApexHive Labs — 5 Pure-Free MIT Tools & EvalShield Cloud Flagship
+# ApexHive Labs — 6 Pure-Free MIT Tools & 1 Commercial Flagship
 
-> Independent open-source engineering lab building 5 pure-free MIT developer & operations tools (MCP proxy & static linter, Base USDC verification rails, self-hosted SME ERP) plus 1 hosted cloud futures risk flagship (`evalshield-copilot`).
+> Independent engineering lab (`ApexHive Labs`) building 6 pure-free MIT developer & operations tools (`#1`–`#5` & `#7`: MCP proxy & static linter, Base/Solana USDC verification rails, self-hosted SME ERP, DNS/DMARC/RUA guard) plus 1 commercial risk flagship (`#6 evalshield-copilot`).
 
-## 5 Pure-Free MIT Tools (#1-#5)
-1. `slimmcp-proxy` (`v1.0.2`, MIT): Progressive-disclosure Meta-MCP proxy (`stdio`, `Streamable-HTTP`, `SSE`) in pure Node.js (`>=24`) cutting 60-tool `tools/list` schema overhead from 60,185 bytes (~15,047 tokens) to 1,286 bytes (~322 tokens) = 97.86% initial schema reduction (~737 tokens / ~95.1% net 1-turn savings including `discover_tools` + `inspect_tool_schema`), with BM25 search, secret redaction, and free RBAC/budget guardrails.
+## 6 Pure-Free MIT Tools (#1-#5 & #7)
+1. `slimmcp-proxy` (`v1.0.2`, MIT, `Node >=22.13 LTS`): Progressive-disclosure Meta-MCP proxy (`stdio`, `Streamable-HTTP`, `SSE`) cutting 60-tool `tools/list` schema overhead from 60,185 bytes (15,047 tokens) to 1,286 bytes (322 tokens) = 97.86% initial schema reduction (~14,310 tok saved / 95.10% net 1-turn; ~737 tok spent including `discover_tools` + `inspect_tool_schema`), with BM25 discovery, fail-closed secret redaction, isolated child env, and deny-overrides RBAC/budget guardrails.
    - GitHub: https://github.com/apexhive-hq/slimmcp-proxy
    - npm: https://www.npmjs.com/package/slimmcp-proxy (`npx -y slimmcp-proxy --help`)
    - Official MCP Registry: https://registry.modelcontextprotocol.io/v0.1/servers/io.github.apexhive-hq%2Fslimmcp-proxy/versions/latest
    - Glama Directory: https://glama.ai/mcp/servers/apexhive-hq/slimmcp-proxy
-2. `zerofiat-base-checkout-kit` (`v2.1.0`, MIT): Non-custodial Base Mainnet USDC (`eip155:8453`) verification rail on Cloudflare Workers with EOA (`EIP-191`) + Smart Wallet (`ERC-1271` / `EIP-6492`) verification and SQLite Durable Object atomic anti-replay lock (`TxClaimLockDO`).
+2. `zerofiat-base-checkout-kit` (`v2.1.0`, MIT, `Node >=22.18 LTS`): Unlimited free Base Mainnet USDC (`eip155:8453`) verification rail on Cloudflare Workers with scoped `TxClaimLockDO` isolation, EOA (`EIP-191`) + Smart Wallet (`ERC-1271` / `EIP-6492`) verification, and strict `409` anti-replay.
    - GitHub: https://github.com/apexhive-hq/zerofiat-base-checkout-kit
    - Live Reference Worker: https://zerofiat-base-checkout-kit.apexhive-hq.workers.dev
-3. `web3-ops-automation-pack` (MIT): Cross-platform TypeScript (`Node.js >= 24`) and Python (`3.12+`) Base/Solana USDC verifiers, Playwright mock EIP-1193 checkout QA harness, and n8n webhook automation templates.
+3. `web3-ops-automation-pack` (`v1.0.1`, MIT, `Node >=22.18 LTS` / `Python 3.12+`): Strict `BigInt` Base & `finalized` Solana USDC verifiers, Playwright mock EIP-1193 checkout QA harness, and fail-closed HMAC-authenticated n8n webhook templates.
    - GitHub: https://github.com/apexhive-hq/web3-ops-automation-pack
-4. `mcp-doctor` (`v1.0.1`, MIT): Lightweight static regex-based MCP security & context-tax CLI linter (`A-F` score grading, `--policy`, `--ci --min-score`, SARIF 2.1.0).
+4. `mcp-doctor` (`v1.0.1`, MIT, `Node >=20 LTS`): Static regex-based MCP security & context-tax CLI linter (`A-F` score grading, masked secret evidence, isolated stdio env, SARIF 2.1.0, `--policy`, `--ci`).
    - GitHub: https://github.com/apexhive-hq/mcp-doctor
    - npm: https://www.npmjs.com/package/apexhive-mcp-doctor (`npx -y apexhive-mcp-doctor status`)
-5. `open-center-os` (`v2.2.0`, MIT): Self-hostable multi-branch SME & education center ERP on `node:sqlite` with trilingual EN/繁中/簡中 UI, HMAC cookie + Bearer admin auth, locked CORS, POS cart, timetable, QR check-in, and unlimited free branches.
+5. `open-center-os` (`v2.2.0`, MIT, `Node >=24` for `node:sqlite`): Self-Hosted SME ERP Module for multi-branch SMEs & education centers with `scrypt` password hashing, SQLite session revocation, trilingual UI (EN/繁中/簡中) & bilingual EN/ZH receipts, POS cart, timetable, QR check-in, and unlimited free branches.
    - GitHub: https://github.com/apexhive-hq/open-center-os
+7. `dmarczero` (`v1.0.0`, MIT, `Node >=20 LTS` CLI / `>=22.13` BYO Worker): Zero-dependency DNS/DMARC/TLS anti-drift guard & streaming `RUA` aggregate analyzer (strictly rejects `RUF` forensic PII) + authenticated self-hosted Cloudflare Email Worker + customizable white-label HTML report.
+   - GitHub: https://github.com/apexhive-hq/dmarczero
 
-## 1 Hosted Cloud Flagship (#6)
-6. `evalshield-copilot` (`v3.0.2`, ApexHive Dual License — Solo 0 USDC Forever · Commercial Team 99 USDC / Enterprise 499 USDC): Human-in-the-loop cross-market futures & prop-firm risk shield covering Topstep, Apex, MFFU, FTMO (1&2-Step), and Tradeify across CME Futures (`ES/NQ/GC/CL`), Gold (`XAUUSD` rollover R-drag), FX, and Crypto Perps (`BTC/ETH/SOL`), with Cross-Account Anti-Hedge Portfolio Guard, Pre-Trade Thesis Journal (`node:sqlite` WAL), Hyperliquid/Polymarket 15s Brief, rolling multi-year macro blackout calendar, 25k-run Monte Carlo, and 1-click self-host `deploy/cloudflare-byo/` kit. Strictly read-only: zero broker API keys and zero automated order placement.
+## 1 Commercial Flagship (#6)
+6. `evalshield-copilot` (`v3.0.2`, ApexHive Dual Source-Available License — Solo 0 USDC Forever · Team Early-Bird 99 USDC · Enterprise Early-Bird 499 USDC): Strictly read-only rule-based cross-market futures & prop-firm risk shield covering Topstep, Apex, MFFU, FTMO (1&2-Step), and Tradeify across CME Futures (`ES/NQ/GC/CL`), Gold (`XAUUSD`), FX, and Crypto Perps (`BTC/ETH/SOL` incl. `SOL-PERP`), with Cross-Account Anti-Hedge Portfolio Guard, Pre-Trade Thesis Journal (`node:sqlite`), Hyperliquid/Polymarket 15s Brief, verified 2026-2027 official Fed FOMC / BLS CPI / BLS NFP blackout schedule + US DST accuracy, 25,000-run Monte Carlo, fail-closed BYO Cloudflare webhook (`deploy/cloudflare-byo/`), and DNS-validated IPv4/IPv6 SSRF protection. Zero broker API keys and zero automated order placement.
    - Hosted Cloud Flagship: https://evalshield-copilot.apexhive-hq.workers.dev/
-   - GitHub (Dual License): https://github.com/apexhive-hq/evalshield-copilot
+   - GitHub (ApexHive Dual Source-Available License): https://github.com/apexhive-hq/evalshield-copilot
 
-## Internal R&D Note
-- `polymarket-paper`: Internal, strictly read-only `$0`-capital research collector using a SHA-256 hash-chained simulation ledger and Brier calibration benchmarks. Not a public commercial or custody product.
-
-## Quick Start (Node.js >= 24)
+## Quick Start
 ```bash
 npx -y slimmcp-proxy --help
 npx -y slimmcp-proxy serve --config /path/to/mcp-servers.json
 npx -y apexhive-mcp-doctor status
 ```
 
-## Contact & Voluntary OSS Support
+## Policies & Contact
 - Showcase: https://apexhive-showcase.pages.dev
-- GitHub Org: https://github.com/apexhive-hq
-- Voluntary Base Mainnet (`eip155:8453`) USDC Tips: `0x32eceaC45DBED9E555dAb80346aBd4Ab9C676206`
+- GitHub Portfolio (@apexhive-hq): https://github.com/apexhive-hq
+- Terms: https://apexhive-showcase.pages.dev/terms.html
+- Privacy (Zero Telemetry / Zero Cookies): https://apexhive-showcase.pages.dev/privacy.html
+- Commercial Refund Policy (#6 EvalShield): https://apexhive-showcase.pages.dev/refund.html
 - Support: apexhive.hq@proton.me

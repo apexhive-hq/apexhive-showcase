@@ -3,297 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ApexHive Labs — 5 Pure-Free MIT Tools &amp; EvalShield Cloud Flagship</title>
-  <meta name="description" content="ApexHive Labs builds 5 pure-free MIT developer &amp; Base USDC tools (slimmcp-proxy, zerofiat, web3-ops, mcp-doctor, open-center-os) plus evalshield-copilot Cloud Flagship." />
-  <meta property="og:title" content="ApexHive Labs — Pure-Free MIT Agent Infrastructure &amp; EvalShield Cloud" />
-  <meta property="og:description" content="Cut MCP tools/list schemas by 97.86% initial (~95.1% net 1-turn) with slimmcp-proxy, harden MCP CI with mcp-doctor, and run read-only prop-firm risk checks with evalshield-copilot." />
+  <title>ApexHive Labs — 6 Pure-Free MIT Tools &amp; EvalShield Commercial Flagship</title>
+  <meta name="description" content="ApexHive Labs builds 6 pure-free MIT developer &amp; operations tools (slimmcp-proxy, zerofiat-base-checkout-kit, web3-ops-automation-pack, mcp-doctor, open-center-os, dmarczero) plus 1 commercial flagship (evalshield-copilot)." />
+  <meta property="og:title" content="ApexHive Labs — 6 Pure-Free MIT Tools &amp; EvalShield Commercial Flagship" />
+  <meta property="og:description" content="Cut MCP tools/list schemas by 97.86% initial (95.10% net 1-turn) with slimmcp-proxy, harden MCP CI with mcp-doctor, monitor DNS/DMARC/RUA with dmarczero, and run read-only prop-firm risk checks with evalshield-copilot." />
   <meta property="og:type" content="website" />
-  <style>
-    :root {
-      --bg: #0b0f17;
-      --surface: #121826;
-      --surface-2: #192234;
-      --border: #263248;
-      --text: #e6edf7;
-      --muted: #98a6bd;
-      --accent: #38bdf8;
-      --accent-2: #22c55e;
-      --warn: #f59e0b;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    }
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .container {
-      width: 100%;
-      max-width: 1060px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    header {
-      border-bottom: 1px solid var(--border);
-      padding: 18px 0;
-    }
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .brand {
-      font-weight: 700;
-      font-size: 1.05rem;
-      letter-spacing: 0.01em;
-      color: var(--text);
-    }
-    .brand span { color: var(--accent); font-family: var(--mono); }
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      flex-wrap: wrap;
-      font-size: 0.92rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border: 1px solid var(--border);
-      background: var(--surface-2);
-      color: var(--text);
-      cursor: pointer;
-      transition: border-color 0.15s, background 0.15s;
-    }
-    .btn:hover { border-color: var(--accent); text-decoration: none; }
-    .btn-primary {
-      background: var(--accent);
-      color: #06101d;
-      border-color: var(--accent);
-    }
-    .btn-primary:hover { background: #56cbfa; }
-    .hero {
-      padding: 52px 0 38px;
-    }
-    .badge {
-      display: inline-block;
-      font-family: var(--mono);
-      font-size: 0.8rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(56, 189, 248, 0.12);
-      color: var(--accent);
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      margin-bottom: 14px;
-    }
-    h1 {
-      font-size: clamp(1.9rem, 4vw, 2.85rem);
-      line-height: 1.15;
-      margin: 0 0 16px;
-      letter-spacing: -0.02em;
-    }
-    .lead {
-      font-size: 1.08rem;
-      color: var(--muted);
-      max-width: 780px;
-      margin: 0 0 26px;
-    }
-    .cta-row {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 32px;
-    }
-    .stats-strip {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 14px;
-    }
-    .stat-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 16px;
-    }
-    .stat-label { font-size: 0.82rem; color: var(--muted); }
-    .stat-val {
-      font-family: var(--mono);
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-top: 4px;
-      color: var(--accent-2);
-    }
-    section { padding: 36px 0; border-top: 1px solid var(--border); }
-    h2 { font-size: 1.5rem; margin: 0 0 10px; }
-    .sub { color: var(--muted); margin: 0 0 22px; }
-    .calc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 20px;
-      align-items: start;
-    }
-    .panel {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
-    }
-    .field { margin-bottom: 16px; }
-    .field:last-child { margin-bottom: 0; }
-    .field label {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-    .field label span { font-family: var(--mono); color: var(--accent); }
-    input[type="number"], input[type="range"], select {
-      width: 100%;
-      background: var(--bg);
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 8px 10px;
-      font-family: var(--mono);
-      font-size: 0.92rem;
-    }
-    input[type="range"] { padding: 0; border: none; accent-color: var(--accent); }
-    .result-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 0;
-      border-bottom: 1px solid var(--border);
-      gap: 12px;
-    }
-    .result-row:last-child { border-bottom: none; }
-    .result-row strong { font-family: var(--mono); }
-    .highlight { color: var(--accent-2); font-size: 1.12rem; }
-    .cards-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 16px;
-    }
-    .cards-2 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 16px;
-    }
-    .tag {
-      display: inline-block;
-      font-family: var(--mono);
-      font-size: 0.74rem;
-      padding: 2px 8px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-    .tag-cloud {
-      color: var(--accent-2);
-      border-color: rgba(34, 197, 94, 0.4);
-      background: rgba(34, 197, 94, 0.08);
-    }
-    .code-box {
-      position: relative;
-      background: #070a10;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 16px;
-      overflow-x: auto;
-      font-family: var(--mono);
-      font-size: 0.85rem;
-      line-height: 1.5;
-      margin: 12px 0;
-    }
-    .code-box pre { margin: 0; white-space: pre; }
-    .copy-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: var(--surface-2);
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 4px 10px;
-      font-size: 0.78rem;
-      cursor: pointer;
-    }
-    .copy-btn:hover { border-color: var(--accent); }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-      font-size: 0.92rem;
-    }
-    th, td {
-      text-align: left;
-      padding: 12px 14px;
-      border-bottom: 1px solid var(--border);
-      vertical-align: top;
-    }
-    th { background: var(--surface-2); font-weight: 600; }
-    tr:last-child td { border-bottom: none; }
-    .notice {
-      background: rgba(56, 189, 248, 0.08);
-      border: 1px solid rgba(56, 189, 248, 0.28);
-      border-radius: 8px;
-      padding: 14px 16px;
-      font-size: 0.9rem;
-      color: var(--text);
-      margin-top: 16px;
-    }
-    .mono { font-family: var(--mono); word-break: break-all; }
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 28px 0 44px;
-      color: var(--muted);
-      font-size: 0.86rem;
-    }
-  </style>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
   <header>
     <div class="container nav">
-      <div class="brand">ApexHive Labs / <span>OSS + Cloud</span></div>
+      <div class="brand">ApexHive Labs / <span>OSS + Flagship</span></div>
       <nav class="nav-links" aria-label="Primary">
         <a href="#ecosystem">Ecosystem</a>
-        <a href="#flagship">Cloud Flagship</a>
+        <a href="#flagship">Commercial Flagship</a>
         <a href="#calculator">Calculator</a>
         <a href="#install">Quickstart</a>
         <a href="/llms.txt">llms.txt</a>
-        <a class="btn" href="https://github.com/apexhive-hq" target="_blank" rel="noopener noreferrer">GitHub Org</a>
+        <a class="btn" href="https://github.com/apexhive-hq" target="_blank" rel="noopener noreferrer">GitHub (@apexhive-hq)</a>
         <a class="btn btn-primary" href="https://evalshield-copilot.apexhive-hq.workers.dev/" target="_blank" rel="noopener noreferrer">Launch EvalShield Cloud</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <section class="hero" style="border-top: none;">
-      <div class="badge">5 Pure-Free MIT Tools &bull; 1 Hosted Cloud Flagship &bull; Node.js &ge;24</div>
-      <h1>Pure-Free MIT agent tools, plus one hosted futures risk flagship.</h1>
+    <section class="hero">
+      <div class="badge">6 Pure-Free MIT Tools (#1&ndash;#5, #7) &bull; 1 Commercial Flagship (#6)</div>
+      <h1>Pure-Free MIT agent, email, and Web3 tools, plus one commercial risk flagship.</h1>
       <p class="lead">
         ApexHive Labs builds verified, CI-tested MIT open-source infrastructure &mdash; led by
-        <strong>slimmcp-proxy</strong> (cut 60-tool MCP <code>tools/list</code> schemas by <strong>97.86%</strong> initial / <strong>~95.1%</strong> net 1-turn across <code>stdio</code>, <code>Streamable-HTTP</code>, and <code>SSE</code>) &mdash; alongside our hosted cloud flagship <strong>evalshield-copilot</strong>.
+        <strong>slimmcp-proxy</strong> (cutting 60-tool MCP <code>tools/list</code> schemas from <strong>60,185 B to 1,286 B</strong>, a <strong>97.86%</strong> initial reduction / <strong>95.10%</strong> net 1-turn savings: <strong>~14,310 tok saved</strong>, <strong>~737 tok spent</strong> across <code>stdio</code>, <code>Streamable-HTTP</code>, and <code>SSE</code>) &mdash; alongside our sole commercial flagship <strong>evalshield-copilot</strong>.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#ecosystem">Explore 5 Free MIT Tools</a>
-        <a class="btn" href="https://evalshield-copilot.apexhive-hq.workers.dev/" target="_blank" rel="noopener noreferrer">Open EvalShield Cloud Flagship</a>
+        <a class="btn btn-primary" href="#ecosystem">Explore 6 Free MIT Tools</a>
+        <a class="btn" href="https://evalshield-copilot.apexhive-hq.workers.dev/" target="_blank" rel="noopener noreferrer">Open EvalShield Flagship</a>
         <a class="btn" href="#calculator">MCP Context Calculator</a>
       </div>
 
@@ -301,104 +44,114 @@
         <div class="stat-card">
           <div class="stat-label">slimmcp-proxy Initial Reduction</div>
           <div class="stat-val">97.86%</div>
-          <div class="stat-label">60,185 B &rarr; 1,286 B (3 meta-tools)</div>
+          <div class="stat-label">60,185 B &rarr; 1,286 B (15,047 &rarr; 322 tok)</div>
         </div>
         <div class="stat-card">
           <div class="stat-label">Net 1-Turn Lookup Savings</div>
-          <div class="stat-val">~95.1%</div>
-          <div class="stat-label">~15,047 tok &rarr; ~737 tok (incl. search + schema)</div>
+          <div class="stat-val">95.10%</div>
+          <div class="stat-label">~14,310 tok saved (~737 tok spent incl. search + schema)</div>
         </div>
         <div class="stat-card">
           <div class="stat-label">Public Portfolio Split</div>
-          <div class="stat-val" style="color: var(--text);">5 Free + 1 Cloud</div>
-          <div class="stat-label">Zero license gates on tools #1&ndash;#5</div>
+          <div class="stat-val stat-val-neutral">6 Free MIT + 1 Commercial</div>
+          <div class="stat-label">Zero paywalls or license gates on #1&ndash;#5 &amp; #7</div>
         </div>
       </div>
     </section>
 
     <section id="ecosystem">
-      <h2>5 Pure-Free MIT Open-Source Tools (<code>#1</code>&ndash;<code>#5</code>)</h2>
-      <p class="sub">Zero commercial gates, zero license keys, and full local self-hosting under the MIT License with automated GitHub Actions CI.</p>
+      <h2>6 Pure-Free MIT Open-Source Tools (<code>#1</code>&ndash;<code>#5</code> &amp; <code>#7</code>)</h2>
+      <p class="sub">Zero commercial paywalls, zero license keys, and full local self-hosting under the MIT License.</p>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Tool (100% Free MIT)</th>
-            <th>Core Capabilities</th>
-            <th>Distribution &amp; Links</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>1. <a href="https://github.com/apexhive-hq/slimmcp-proxy" target="_blank" rel="noopener noreferrer"><code>slimmcp-proxy</code></a> (<code>v1.0.2</code>)</strong></td>
-            <td>Progressive-disclosure Meta-MCP proxy (<code>stdio</code>, <code>Streamable-HTTP</code>, <code>SSE</code>) with deterministic BM25 tool discovery, lazy 1-tool schema load, secret redaction, and free RBAC/budget guardrails.</td>
-            <td>
-              <a href="https://github.com/apexhive-hq/slimmcp-proxy" target="_blank" rel="noopener noreferrer">GitHub</a> &bull;
-              <a href="https://www.npmjs.com/package/slimmcp-proxy" target="_blank" rel="noopener noreferrer">npm</a> &bull;
-              <a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.apexhive-hq%2Fslimmcp-proxy/versions/latest" target="_blank" rel="noopener noreferrer">MCP Registry</a> &bull;
-              <a href="https://glama.ai/mcp/servers/apexhive-hq/slimmcp-proxy" target="_blank" rel="noopener noreferrer">Glama</a>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>2. <a href="https://github.com/apexhive-hq/zerofiat-base-checkout-kit" target="_blank" rel="noopener noreferrer"><code>zerofiat-base-checkout-kit</code></a> (<code>v2.1.0</code>)</strong></td>
-            <td>Non-custodial Base Mainnet USDC verification rail on Cloudflare Workers with EOA (<code>EIP-191</code>) + Smart Wallet (<code>ERC-1271</code> / <code>EIP-6492</code>) support and SQLite Durable Object atomic anti-replay locks (<code>TxClaimLockDO</code>).</td>
-            <td>
-              <a href="https://github.com/apexhive-hq/zerofiat-base-checkout-kit" target="_blank" rel="noopener noreferrer">GitHub</a> &bull;
-              <a href="https://zerofiat-base-checkout-kit.apexhive-hq.workers.dev" target="_blank" rel="noopener noreferrer">Reference Worker</a>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>3. <a href="https://github.com/apexhive-hq/web3-ops-automation-pack" target="_blank" rel="noopener noreferrer"><code>web3-ops-automation-pack</code></a></strong></td>
-            <td>Cross-platform TypeScript (<code>Node.js &ge;24</code>) &amp; Python (<code>3.12+</code>) Base/Solana USDC verifiers, Playwright mock EIP-1193 checkout QA harness, and n8n webhook automation templates.</td>
-            <td><a href="https://github.com/apexhive-hq/web3-ops-automation-pack" target="_blank" rel="noopener noreferrer">GitHub</a></td>
-          </tr>
-          <tr>
-            <td><strong>4. <a href="https://github.com/apexhive-hq/mcp-doctor" target="_blank" rel="noopener noreferrer"><code>mcp-doctor</code></a> (<code>v1.0.1</code>)</strong></td>
-            <td>Lightweight static regex-based MCP security &amp; context-tax CLI linter (<code>A&ndash;F</code> score grading, <code>--policy</code>, <code>--ci --min-score</code>, SARIF 2.1.0). Designed strictly for fast CI hygiene checks.</td>
-            <td>
-              <a href="https://github.com/apexhive-hq/mcp-doctor" target="_blank" rel="noopener noreferrer">GitHub</a> &bull;
-              <a href="https://www.npmjs.com/package/apexhive-mcp-doctor" target="_blank" rel="noopener noreferrer">npm</a>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>5. <a href="https://github.com/apexhive-hq/open-center-os" target="_blank" rel="noopener noreferrer"><code>open-center-os</code></a> (<code>v2.2.0</code>)</strong></td>
-            <td>Self-hostable multi-branch SME &amp; education center ERP on <code>node:sqlite</code> with trilingual EN/繁中/簡中 UI, HMAC cookie + Bearer admin auth, locked CORS, POS cart, timetable, QR check-in, and unlimited free branches.</td>
-            <td><a href="https://github.com/apexhive-hq/open-center-os" target="_blank" rel="noopener noreferrer">GitHub</a></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Tool (100% Free MIT)</th>
+              <th>Core Capabilities &amp; Runtime</th>
+              <th>Distribution &amp; Links</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. <a href="https://github.com/apexhive-hq/slimmcp-proxy" target="_blank" rel="noopener noreferrer"><code>slimmcp-proxy</code></a> (<code>v1.0.2</code>)</strong></td>
+              <td>Progressive-disclosure Meta-MCP proxy (<code>Node &ge;22.13 LTS</code>; <code>stdio</code>, <code>Streamable-HTTP</code>, <code>SSE</code>) cutting 60-tool schemas from <code>60,185 B</code> to <code>1,286 B</code> (<code>97.86%</code> initial / <code>~14,310 tok</code> saved, <code>95.10%</code> net 1-turn, <code>~737 tok</code> spent) with BM25 discovery, fail-closed secret redaction, and deny-overrides RBAC/budget guardrails.</td>
+              <td>
+                <a href="https://github.com/apexhive-hq/slimmcp-proxy" target="_blank" rel="noopener noreferrer">GitHub</a> &bull;
+                <a href="https://www.npmjs.com/package/slimmcp-proxy" target="_blank" rel="noopener noreferrer">npm</a> &bull;
+                <a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.apexhive-hq%2Fslimmcp-proxy/versions/latest" target="_blank" rel="noopener noreferrer">MCP Registry</a> &bull;
+                <a href="https://glama.ai/mcp/servers/apexhive-hq/slimmcp-proxy" target="_blank" rel="noopener noreferrer">Glama</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>2. <a href="https://github.com/apexhive-hq/zerofiat-base-checkout-kit" target="_blank" rel="noopener noreferrer"><code>zerofiat-base-checkout-kit</code></a> (<code>v2.1.0</code>)</strong></td>
+              <td>Unlimited free Base Mainnet USDC (<code>eip155:8453</code>) verification rail on Cloudflare Workers (<code>Node &ge;22.18 LTS</code>) with scoped <code>TxClaimLockDO</code> isolation, EOA (<code>EIP-191</code>) + Smart Wallet (<code>ERC-1271</code> / <code>EIP-6492</code>) verification, and strict <code>409</code> anti-replay.</td>
+              <td>
+                <a href="https://github.com/apexhive-hq/zerofiat-base-checkout-kit" target="_blank" rel="noopener noreferrer">GitHub</a> &bull;
+                <a href="https://zerofiat-base-checkout-kit.apexhive-hq.workers.dev" target="_blank" rel="noopener noreferrer">Reference Worker</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>3. <a href="https://github.com/apexhive-hq/web3-ops-automation-pack" target="_blank" rel="noopener noreferrer"><code>web3-ops-automation-pack</code></a> (<code>v1.0.1</code>)</strong></td>
+              <td>Strict <code>BigInt</code> Base &amp; <code>finalized</code> Solana USDC verifiers in TypeScript (<code>Node &ge;22.18 LTS</code>) &amp; Python (<code>3.12+</code>), Playwright mock EIP-1193 checkout QA harness, and fail-closed HMAC-authenticated n8n webhook templates.</td>
+              <td><a href="https://github.com/apexhive-hq/web3-ops-automation-pack" target="_blank" rel="noopener noreferrer">GitHub</a></td>
+            </tr>
+            <tr>
+              <td><strong>4. <a href="https://github.com/apexhive-hq/mcp-doctor" target="_blank" rel="noopener noreferrer"><code>mcp-doctor</code></a> (<code>v1.0.1</code>)</strong></td>
+              <td>Static regex-based security &amp; context-tax MCP CLI linter (<code>Node &ge;20 LTS</code>) with <code>A&ndash;F</code> score grading, masked secret evidence, isolated stdio env, SARIF 2.1.0 output, <code>--policy</code>, and <code>--ci</code>.</td>
+              <td>
+                <a href="https://github.com/apexhive-hq/mcp-doctor" target="_blank" rel="noopener noreferrer">GitHub</a> &bull;
+                <a href="https://www.npmjs.com/package/apexhive-mcp-doctor" target="_blank" rel="noopener noreferrer">npm</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>5. <a href="https://github.com/apexhive-hq/open-center-os" target="_blank" rel="noopener noreferrer"><code>open-center-os</code></a> (<code>v2.2.0</code>)</strong></td>
+              <td><strong>Self-Hosted SME ERP Module</strong> (<code>Node &ge;24</code> for <code>node:sqlite</code>): multi-branch SME &amp; education center ERP with <code>scrypt</code> password hashing, SQLite session revocation, trilingual UI (EN/繁中/簡中) &amp; bilingual EN/ZH receipts, POS, timetable, QR check-in, and unlimited free branches.</td>
+              <td><a href="https://github.com/apexhive-hq/open-center-os" target="_blank" rel="noopener noreferrer">GitHub</a></td>
+            </tr>
+            <tr>
+              <td><strong>7. <a href="https://github.com/apexhive-hq/dmarczero" target="_blank" rel="noopener noreferrer"><code>dmarczero</code></a> (<code>v1.0.0</code>)</strong></td>
+              <td>Zero-dependency DNS/DMARC/TLS anti-drift guard &amp; streaming <code>RUA</code> aggregate analyzer (strictly rejects <code>RUF</code> forensic PII; <code>Node &ge;20 LTS</code> CLI / <code>&ge;22.13</code> BYO Worker) + authenticated self-hosted Cloudflare Email Worker + customizable white-label HTML report.</td>
+              <td><a href="https://github.com/apexhive-hq/dmarczero" target="_blank" rel="noopener noreferrer">GitHub</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section id="flagship">
-      <h2>Hosted Cloud Flagship (<code>#6 evalshield-copilot v3.0.2</code>)</h2>
-      <p class="sub">Strictly read-only cross-market futures &amp; prop-firm risk shield &mdash; <strong>ApexHive Dual License: Solo 0 USDC Forever &bull; Commercial Team 99 / Enterprise 499 USDC</strong> (zero broker API keys, zero automated order placement).</p>
+      <h2>Sole Commercial Flagship (<code>#6 evalshield-copilot v3.0.2</code>)</h2>
+      <p class="sub">Strictly read-only cross-market futures &amp; prop-firm risk shield under the <strong>ApexHive Dual Source-Available License</strong>: <strong>Solo 0 USDC Forever &bull; Team Early-Bird 99 USDC &bull; Enterprise Early-Bird 499 USDC</strong> (zero broker API keys, zero automated order placement).</p>
 
       <div class="cards-2">
         <div class="panel">
-          <span class="tag tag-cloud">Hosted Cloud Flagship &bull; Solo 0 USDC Forever</span>
-          <h3 style="margin-top:0;"><code>evalshield-copilot</code> (<code>v3.0.2</code>)</h3>
-          <p style="color:var(--muted);">
-            Full 300-point cross-market engine free forever for Solo traders (1 person): trailing drawdowns (Topstep, Apex, MFFU, FTMO 1&amp;2-Step, Tradeify), CME Futures (<code>ES/NQ/GC/CL</code>), Gold (<code>XAUUSD</code> rollover R-drag), Crypto Perps (<code>BTC/ETH/SOL</code>), Cross-Account Anti-Hedge Portfolio Guard, Pre-Trade Thesis Journal, Hyperliquid &amp; Polymarket 15s Brief, rolling macro blackout calendar, 25k Monte Carlo, and 1-click <code>deploy/cloudflare-byo/</code> self-host kit. Commercial desks: Team Early-Bird 99 USDC (2&ndash;99 seats) / Enterprise Early-Bird 499 USDC (100+ seats).
+          <span class="tag tag-cloud">ApexHive Dual Source-Available License &bull; Solo 0 USDC Forever</span>
+          <h3><code>evalshield-copilot</code> (<code>v3.0.2</code>)</h3>
+          <p class="muted">
+            Rule-based cross-market risk evaluation engine free forever for Solo traders (1 person): trailing drawdowns (Topstep, Apex, MFFU, FTMO 1&amp;2-Step, Tradeify), CME Futures (<code>ES/NQ/GC/CL</code>), Gold (<code>XAUUSD</code> rollover R-drag), FX, and Crypto Perps (<code>BTC/ETH/SOL</code> incl. <code>SOL-PERP</code>), Cross-Account Anti-Hedge Portfolio Guard, Pre-Trade Thesis Journal (<code>node:sqlite</code>), Hyperliquid &amp; Polymarket 15s Brief, verified <code>2026&ndash;2027</code> official Fed FOMC / BLS CPI / BLS NFP blackout schedule with US DST accuracy, <strong>25,000-run Monte Carlo</strong> simulator, and 1-click <code>deploy/cloudflare-byo/</code> fail-closed BYO webhook kit.
           </p>
-          <div class="cta-row" style="margin-bottom:0;">
+          <div class="cta-row cta-row-tight">
             <a class="btn btn-primary" href="https://evalshield-copilot.apexhive-hq.workers.dev/" target="_blank" rel="noopener noreferrer">Open EvalShield Cloud</a>
             <a class="btn" href="https://github.com/apexhive-hq/evalshield-copilot" target="_blank" rel="noopener noreferrer">Inspect Source (Dual License)</a>
           </div>
         </div>
 
         <div class="panel">
-          <span class="tag">Internal R&amp;D Note</span>
-          <h3 style="margin-top:0;"><code>polymarket-paper</code> (Zero-Capital Research)</h3>
-          <p style="color:var(--muted); margin-bottom:0;">
-            We also run an internal, strictly read-only <code>$0</code>-capital research collector (<code>polymarket-paper</code>) using a SHA-256 hash-chained simulation ledger and Brier calibration tests. It operates solely for internal quantitative R&amp;D and is not a public investment or custody product.
-          </p>
+          <span class="tag">Commercial Tiers &amp; Security Controls</span>
+          <h3>Licensing &amp; Safeguards</h3>
+          <ul class="list-clean">
+            <li><strong>Solo Personal (1 person):</strong> <code>0 USDC</code> forever — full local CLI/Web rule-based risk engine, public <code>25,000</code>-run sandbox, and self-hosted <code>deploy/cloudflare-byo/</code> template.</li>
+            <li><strong>Commercial Team (2&ndash;99 seats):</strong> <code>99 USDC</code> Early-Bird one-time Base Mainnet USDC payment for an official Ed25519 entitlement (<code>EVALSHIELD-PRO-v1</code> token + <code>evalshield-copilot-entitlement.json</code> + HTML certificate) + hosted relay access.</li>
+            <li><strong>Commercial Enterprise (100+ seats):</strong> <code>499 USDC</code> Early-Bird one-time Base USDC license with organization-wide seats and redistribution entitlement.</li>
+            <li><strong>Built-in Protections:</strong> DNS-validated IPv4/IPv6 SSRF protection on connectors, fail-closed webhook secrets, and strictly read-only analytics (<a href="/refund.html">Refund Policy</a>).</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section id="calculator">
       <h2>Interactive <code>slimmcp-proxy</code> Context Tax Calculator</h2>
-      <p class="sub">Model both <strong>initial <code>tools/list</code> schema reduction</strong> and realistic <strong>net 1-turn lookup cost</strong> (meta-tools + 5 BM25 summaries + 1 lazy schema load = <code>+415</code> tokens lookup overhead) using <code>Math.ceil(utf8Bytes / 4)</code>.</p>
+      <p class="sub">Model both <strong>initial <code>tools/list</code> schema reduction</strong> and realistic <strong>net 1-turn lookup cost</strong> (meta-tools + 5 BM25 summaries + 1 lazy schema load = <code>+415</code> tokens lookup overhead) using <code>Math.ceil(utf8Bytes / 4)</code>. Default 60-tool fixture: <code>60 &times; 1,003 B + 5 B envelope = 60,185 B</code>.</p>
 
       <div class="calc-grid">
         <div class="panel">
@@ -407,7 +160,7 @@
             <input id="toolCount" type="range" min="5" max="300" value="60" />
           </div>
           <div class="field">
-            <label for="bytesPerTool">Avg. Bytes per Tool Schema <span id="bytesPerToolLabel">1003 B</span></label>
+            <label for="bytesPerTool">Avg. Bytes per Tool Schema <span id="bytesPerToolLabel">1,003 B</span></label>
             <input id="bytesPerTool" type="number" min="200" max="5000" step="10" value="1003" />
           </div>
           <div class="field">
@@ -427,7 +180,7 @@
         <div class="panel" aria-live="polite">
           <div class="result-row">
             <span>Raw Upstream <code>tools/list</code></span>
-            <strong id="outRaw">60,180 B (~15,045 tokens)</strong>
+            <strong id="outRaw">60,185 B (~15,047 tokens)</strong>
           </div>
           <div class="result-row">
             <span>slimmcp-proxy Fixed Overhead (3 tools)</span>
@@ -439,22 +192,22 @@
           </div>
           <div class="result-row">
             <span>Est. 1-Turn Lookup Net Savings</span>
-            <strong id="outTurnOne" class="highlight">~95.10% (~737 tok)</strong>
+            <strong id="outTurnOne" class="highlight">95.10% (~14,310 tok saved; ~737 tok spent)</strong>
           </div>
           <div class="result-row">
             <span>Tokens Saved per Idle Turn</span>
-            <strong id="outPerTurn">14,723 tokens</strong>
+            <strong id="outPerTurn">14,725 tokens</strong>
           </div>
           <div class="result-row">
             <span>Tokens Saved per Session</span>
-            <strong id="outPerSession">294,045 tokens</strong>
+            <strong id="outPerSession">294,085 tokens</strong>
           </div>
           <div class="result-row">
             <span>Est. Input Cost Saved per Session</span>
             <strong id="outCost" class="highlight">$0.88</strong>
           </div>
-          <div style="margin-top: 14px; font-size: 0.85rem; color: var(--muted);" id="outBreakEven">
-            100% Free MIT Proxy (`slimmcp-proxy`). Net 20-turn session savings include the 1-turn lookup overhead (~415 tokens) and support stdio, Streamable-HTTP, and SSE upstreams.
+          <div class="calc-note" id="outBreakEven">
+            100% Pure-Free MIT Proxy (slimmcp-proxy). Net 20-turn session savings include the 1-turn lookup overhead (~415 tokens) and support stdio, Streamable-HTTP, and SSE upstreams.
           </div>
         </div>
       </div>
@@ -462,34 +215,34 @@
 
     <section id="architecture">
       <h2>How <code>slimmcp-proxy</code> Works Across <code>stdio</code>, HTTP &amp; SSE</h2>
-      <p class="sub">Pure Node.js <code>&ge;24.0.0</code> using built-in <code>node:sqlite</code> and <code>node:crypto</code> &mdash; zero Docker, zero <code>node-gyp</code>, zero external embedding APIs.</p>
+      <p class="sub">Pure Node.js <code>&ge;22.13 LTS</code> using built-in <code>node:sqlite</code> and <code>node:crypto</code> &mdash; zero Docker required, zero <code>node-gyp</code>, zero external embedding APIs.</p>
       <div class="cards-3">
         <div class="panel">
-          <h3 style="margin-top:0;">1. <code>discover_tools</code></h3>
-          <p style="color:var(--muted); margin-bottom:0;">Deterministic BM25 search across local <code>stdio</code>, <code>Streamable-HTTP</code>, and <code>SSE</code> upstreams returning compact tool summaries.</p>
+          <h3>1. <code>discover_tools</code></h3>
+          <p class="muted-flush">Deterministic BM25 search across local <code>stdio</code>, <code>Streamable-HTTP</code>, and <code>SSE</code> upstreams returning compact tool summaries.</p>
         </div>
         <div class="panel">
-          <h3 style="margin-top:0;">2. <code>inspect_tool_schema</code></h3>
-          <p style="color:var(--muted); margin-bottom:0;">Lazy-loads the full JSON schema for only the single tool you intend to invoke &mdash; keeping unused schemas out of prompt context.</p>
+          <h3>2. <code>inspect_tool_schema</code></h3>
+          <p class="muted-flush">Lazy-loads the full JSON schema for only the single tool you intend to invoke &mdash; keeping unused schemas out of prompt context.</p>
         </div>
         <div class="panel">
-          <h3 style="margin-top:0;">3. <code>invoke_tool</code></h3>
-          <p style="color:var(--muted); margin-bottom:0;">Masks common secret patterns (AWS keys, GitHub PATs, Stripe keys, OpenAI tokens, PEM keys, JWTs), enforces free MIT RBAC/budget rules, and proxies execution.</p>
+          <h3>3. <code>invoke_tool</code></h3>
+          <p class="muted-flush">Fails closed on deep payloads (&gt;24 depth), masks sensitive JSON keys and secrets, enforces deny-overrides RBAC/budget rules, and isolates child env variables.</p>
         </div>
       </div>
     </section>
 
     <section id="install">
       <h2>Verified Quick Start (npm <code>npx</code> &amp; GitHub Source)</h2>
-      <p class="sub">Install via npm for Node.js &ge;24 or clone any repository directly from GitHub:</p>
+      <p class="sub">Run our MIT CLI tools directly with <code>npx</code> or clone any repository from GitHub:</p>
 
       <div class="code-box">
         <button class="copy-btn" type="button" data-copy="cmd-install">Copy</button>
-        <pre id="cmd-install"># 1. Run slimmcp-proxy (100% Free MIT):
+        <pre id="cmd-install"># 1. Run slimmcp-proxy (100% Free MIT, Node &gt;=22.13 LTS):
 npx -y slimmcp-proxy --help
 npx -y slimmcp-proxy serve --config /path/to/mcp-servers.json
 
-# 2. Run mcp-doctor static MCP CI linter (100% Free MIT):
+# 2. Run mcp-doctor static MCP CI linter (100% Free MIT, Node &gt;=20 LTS):
 npx -y apexhive-mcp-doctor status
 
 # 3. Clone &amp; run verified 60-tool benchmark from source:
@@ -499,7 +252,7 @@ pnpm install --ignore-scripts
 pnpm run typecheck &amp;&amp; pnpm test &amp;&amp; pnpm run benchmark</pre>
       </div>
 
-      <p style="margin-top: 18px; margin-bottom: 6px; font-weight: 600;">Example <code>mcp.json</code> (npm <code>npx</code>):</p>
+      <p class="label-block">Example <code>mcp.json</code> (npm <code>npx</code>):</p>
       <div class="code-box">
         <button class="copy-btn" type="button" data-copy="cmd-mcp">Copy</button>
         <pre id="cmd-mcp">{
@@ -513,87 +266,29 @@ pnpm run typecheck &amp;&amp; pnpm test &amp;&amp; pnpm run benchmark</pre>
       </div>
 
       <div class="notice">
-        <strong>Voluntary Open-Source Tips (Base Mainnet USDC):</strong> Tools <code>#1</code>&ndash;<code>#5</code> are 100% free MIT forever. If they helped your workflow, voluntary Base Mainnet (<code>eip155:8453</code>) USDC tips are welcome at <span class="mono">0x32eceaC45DBED9E555dAb80346aBd4Ab9C676206</span>. Support: <a href="mailto:apexhive.hq@proton.me">apexhive.hq@proton.me</a>.
+        <strong>Governance &amp; Support:</strong> Tools <code>#1</code>&ndash;<code>#5</code> and <code>#7</code> are 100% Pure-Free MIT open source with no donation prompts or paywalls. Commercial licensing applies solely to <code>#6 evalshield-copilot</code> Team/Enterprise tiers. Support: <a href="mailto:apexhive.hq@proton.me">apexhive.hq@proton.me</a> &bull; <a href="/terms.html">Terms</a> &bull; <a href="/privacy.html">Privacy</a> &bull; <a href="/refund.html">Commercial Refund Policy</a>.
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <div><strong>ApexHive Labs</strong> &bull; 5 Pure-Free MIT Tools + EvalShield Cloud Flagship &bull; Zero-tracking static showcase (no cookies, no third-party ad scripts).</div>
-      <div style="margin-top: 6px;">
+      <div><strong>ApexHive Labs</strong> &bull; 6 Pure-Free MIT Tools (#1&ndash;#5, #7) + 1 Commercial Flagship (#6) &bull; Zero Telemetry / Zero Cookies.</div>
+      <div class="footer-row">
         Machine-readable summary: <a href="/llms.txt">/llms.txt</a> &bull;
-        GitHub: <a href="https://github.com/apexhive-hq" target="_blank" rel="noopener noreferrer">github.com/apexhive-hq</a> &bull;
+        GitHub Portfolio: <a href="https://github.com/apexhive-hq" target="_blank" rel="noopener noreferrer">GitHub (@apexhive-hq)</a> &bull;
         Official MCP Registry: <a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.apexhive-hq%2Fslimmcp-proxy/versions/latest" target="_blank" rel="noopener noreferrer">io.github.apexhive-hq/slimmcp-proxy</a> &bull;
         Glama: <a href="https://glama.ai/mcp/servers/apexhive-hq/slimmcp-proxy" target="_blank" rel="noopener noreferrer">glama.ai</a>
+      </div>
+      <div class="footer-row">
+        Policies: <a href="/terms.html">Terms of Use</a> &bull;
+        <a href="/privacy.html">Privacy (Zero Telemetry)</a> &bull;
+        <a href="/refund.html">Commercial Refund Policy</a> &bull;
+        Contact: <a href="mailto:apexhive.hq@proton.me">apexhive.hq@proton.me</a>
       </div>
     </div>
   </footer>
 
-  <script>
-    (function () {
-      const FIXED_BYTES = 1286;
-      const FIXED_TOKENS = Math.ceil(FIXED_BYTES / 4); // 322
-      const TURN_ONE_LOOKUP_OVERHEAD = 415; // 5 BM25 summaries + 1 lazy schema
-
-      const elTools = document.getElementById("toolCount");
-      const elBytes = document.getElementById("bytesPerTool");
-      const elTurns = document.getElementById("turnsPerSession");
-      const elPrice = document.getElementById("pricePerMillion");
-
-      function fmt(n) {
-        return Number(n).toLocaleString("en-US");
-      }
-
-      function updateCalc() {
-        const tools = Math.max(1, parseInt(elTools.value, 10) || 60);
-        const bytesPerTool = Math.max(100, parseInt(elBytes.value, 10) || 1003);
-        const turns = Math.max(1, parseInt(elTurns.value, 10) || 20);
-        const pricePerM = parseFloat(elPrice.value) || 3;
-
-        document.getElementById("toolCountLabel").textContent = tools;
-        document.getElementById("bytesPerToolLabel").textContent = fmt(bytesPerTool) + " B";
-        document.getElementById("turnsLabel").textContent = turns;
-
-        const rawBytes = tools * bytesPerTool;
-        const rawTokens = Math.ceil(rawBytes / 4);
-        const savedPerTurn = Math.max(0, rawTokens - FIXED_TOKENS);
-        const reductionPct = rawBytes > 0 ? ((1 - FIXED_BYTES / rawBytes) * 100) : 0;
-        const turnOneTokens = FIXED_TOKENS + TURN_ONE_LOOKUP_OVERHEAD;
-        const turnOneReductionPct = rawTokens > 0 ? Math.max(0, (1 - turnOneTokens / rawTokens) * 100) : 0;
-        const savedPerSession = Math.max(0, savedPerTurn * turns - TURN_ONE_LOOKUP_OVERHEAD);
-        const costSaved = (savedPerSession / 1_000_000) * pricePerM;
-
-        document.getElementById("outRaw").textContent = fmt(rawBytes) + " B (~" + fmt(rawTokens) + " tokens)";
-        document.getElementById("outReduction").textContent = reductionPct.toFixed(2) + "%";
-        document.getElementById("outTurnOne").textContent = "~" + turnOneReductionPct.toFixed(1) + "% (~" + fmt(turnOneTokens) + " tok)";
-        document.getElementById("outPerTurn").textContent = fmt(savedPerTurn) + " tokens";
-        document.getElementById("outPerSession").textContent = fmt(savedPerSession) + " tokens";
-        document.getElementById("outCost").textContent = "$" + costSaved.toFixed(2);
-        document.getElementById("outBreakEven").textContent =
-          "100% Free MIT Proxy (slimmcp-proxy). Net " + fmt(turns) + "-turn session savings include the 1-turn lookup overhead (~415 tokens) and support stdio, Streamable-HTTP, and SSE upstreams.";
-      }
-
-      [elTools, elBytes, elTurns, elPrice].forEach(function (el) {
-        el.addEventListener("input", updateCalc);
-        el.addEventListener("change", updateCalc);
-      });
-      updateCalc();
-
-      document.querySelectorAll(".copy-btn").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          const targetId = btn.getAttribute("data-copy");
-          const pre = document.getElementById(targetId);
-          if (!pre) return;
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(pre.textContent).then(function () {
-              btn.textContent = "Copied";
-              setTimeout(function () { btn.textContent = "Copy"; }, 1500);
-            });
-          }
-        });
-      });
-    })();
-  </script>
+  <script src="/app.js"></script>
 </body>
 </html>

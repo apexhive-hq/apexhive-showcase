@@ -1,7 +1,7 @@
 {
   "name": "apexhive-showcase",
-  "version": "1.1.0",
-  "description": "ApexHive Labs static showcase (5 pure-free MIT developer tools + EvalShield Cloud flagship) with Wrangler Pages dev and Playwright E2E suite.",
+  "version": "1.2.0",
+  "description": "ApexHive Labs static showcase (6 pure-free MIT tools + EvalShield Dual Source-Available Commercial Flagship) with Wrangler Pages dev and Playwright E2E suite.",
   "private": true,
   "license": "MIT",
   "type": "module",
