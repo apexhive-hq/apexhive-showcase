@@ -1,0 +1,19 @@
+{
+  "name": "apexhive-showcase",
+  "version": "1.1.0",
+  "description": "ApexHive Labs static showcase (5 pure-free MIT developer tools + EvalShield Cloud flagship) with Wrangler Pages dev and Playwright E2E suite.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test tests/*.test.mjs",
+    "dev": "wrangler pages dev site --port 8788"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "playwright": "1.64.1",
+    "typescript": "^5.8.3",
+    "wrangler": "4.125.0"
+  }
+}

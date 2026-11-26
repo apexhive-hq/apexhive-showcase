@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Machine-readable project summary
+# /llms.txt
