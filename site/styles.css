@@ -109,6 +109,10 @@ h1 {
 .cta-row-tight {
   margin-bottom: 0;
 }
+.cta-row-spaced {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
 .stats-strip {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));

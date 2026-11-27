@@ -3,147 +3,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ApexHive Labs — 6 Pure-Free MIT Tools &amp; EvalShield Commercial Flagship</title>
-  <meta name="description" content="ApexHive Labs builds 6 pure-free MIT developer &amp; operations tools (slimmcp-proxy, zerofiat-base-checkout-kit, web3-ops-automation-pack, mcp-doctor, open-center-os, dmarczero) plus 1 commercial flagship (evalshield-copilot)." />
-  <meta property="og:title" content="ApexHive Labs — 6 Pure-Free MIT Tools &amp; EvalShield Commercial Flagship" />
-  <meta property="og:description" content="Cut MCP tools/list schemas by 97.86% initial (95.10% net 1-turn) with slimmcp-proxy, harden MCP CI with mcp-doctor, monitor DNS/DMARC/RUA with dmarczero, and run read-only prop-firm risk checks with evalshield-copilot." />
+  <title>ApexHive Labs — Agent Infrastructure, Web3 Verification, Ops &amp; Trading Risk</title>
+  <meta name="description" content="ApexHive Labs builds developer and operations software across four engineering areas: AI Agent &amp; MCP Tools, Payments &amp; Web3 Ops, Operations &amp; Email Defense, and Trading Risk Control." />
+  <meta property="og:title" content="ApexHive Labs — Agent Infrastructure, Web3 Verification, Ops &amp; Trading Risk" />
+  <meta property="og:description" content="Practical tooling for MCP context reduction and CI linting, Base/Solana USDC verification, SME center operations, DMARC/RUA defense, and read-only futures risk evaluation." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
   <header>
     <div class="container nav">
-      <div class="brand">ApexHive Labs / <span>OSS + Flagship</span></div>
+      <div class="brand">ApexHive Labs / <span>Engineering</span></div>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#ecosystem">Ecosystem</a>
-        <a href="#flagship">Commercial Flagship</a>
-        <a href="#calculator">Calculator</a>
+        <a href="#ecosystem">Tools</a>
+        <a href="#evalshield">EvalShield Copilot</a>
+        <a href="#calculator">MCP Calculator</a>
         <a href="#install">Quickstart</a>
         <a href="/llms.txt">llms.txt</a>
         <a class="btn" href="https://github.com/apexhive-hq" target="_blank" rel="noopener noreferrer">GitHub (@apexhive-hq)</a>
-        <a class="btn btn-primary" href="https://evalshield-copilot.apexhive-hq.workers.dev/" target="_blank" rel="noopener noreferrer">Launch EvalShield Cloud</a>
+        <a class="btn btn-primary" href="https://evalshield-copilot.apexhive-hq.workers.dev/" target="_blank" rel="noopener noreferrer">Open EvalShield Copilot</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <div class="badge">6 Pure-Free MIT Tools (#1&ndash;#5, #7) &bull; 1 Commercial Flagship (#6)</div>
-      <h1>Pure-Free MIT agent, email, and Web3 tools, plus one commercial risk flagship.</h1>
+      <div class="badge">ApexHive Labs &bull; Self-Hosted &amp; Edge Software</div>
+      <h1>Practical infrastructure for AI agents, Web3 payments, operations, and trading risk.</h1>
       <p class="lead">
-        ApexHive Labs builds verified, CI-tested MIT open-source infrastructure &mdash; led by
-        <strong>slimmcp-proxy</strong> (cutting 60-tool MCP <code>tools/list</code> schemas from <strong>60,185 B to 1,286 B</strong>, a <strong>97.86%</strong> initial reduction / <strong>95.10%</strong> net 1-turn savings: <strong>~14,310 tok saved</strong>, <strong>~737 tok spent</strong> across <code>stdio</code>, <code>Streamable-HTTP</code>, and <code>SSE</code>) &mdash; alongside our sole commercial flagship <strong>evalshield-copilot</strong>.
+        ApexHive Labs builds focused, local-first software across four engineering areas:
+        <strong>AI Agent &amp; MCP Tools</strong> (progressive tool loading and static CI linting),
+        <strong>Payments &amp; Web3 Ops</strong> (non-custodial Base and Solana USDC verification),
+        <strong>Operations &amp; Email Defense</strong> (multi-branch center management and DMARC/RUA monitoring), and
+        <strong>Trading Risk Control</strong> (read-only prop-firm and futures drawdown evaluation).
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#ecosystem">Explore 6 Free MIT Tools</a>
-        <a class="btn" href="https://evalshield-copilot.apexhive-hq.workers.dev/" target="_blank" rel="noopener noreferrer">Open EvalShield Flagship</a>
+        <a class="btn btn-primary" href="#ecosystem">Browse All Tools</a>
+        <a class="btn" href="#evalshield">EvalShield Copilot</a>
         <a class="btn" href="#calculator">MCP Context Calculator</a>
       </div>
 
       <div class="stats-strip">
         <div class="stat-card">
-          <div class="stat-label">slimmcp-proxy Initial Reduction</div>
-          <div class="stat-val">97.86%</div>
-          <div class="stat-label">60,185 B &rarr; 1,286 B (15,047 &rarr; 322 tok)</div>
+          <div class="stat-label">AI Agent &amp; MCP Tools</div>
+          <div class="stat-val stat-val-neutral">slimmcp &bull; mcp-doctor</div>
+          <div class="stat-label">Lazy MCP schema loading, secret redaction, and static CI lint</div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">Net 1-Turn Lookup Savings</div>
-          <div class="stat-val">95.10%</div>
-          <div class="stat-label">~14,310 tok saved (~737 tok spent incl. search + schema)</div>
+          <div class="stat-label">Payments &amp; Web3 Ops</div>
+          <div class="stat-val stat-val-neutral">ZeroFiat &bull; Web3 Ops</div>
+          <div class="stat-label">Base/Solana USDC verification, anti-replay locks, and QA</div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">Public Portfolio Split</div>
-          <div class="stat-val stat-val-neutral">6 Free MIT + 1 Commercial</div>
-          <div class="stat-label">Zero paywalls or license gates on #1&ndash;#5 &amp; #7</div>
+          <div class="stat-label">Ops, Email &amp; Risk</div>
+          <div class="stat-val stat-val-neutral">OpenCenter &bull; DMARC &bull; EvalShield</div>
+          <div class="stat-label">Self-hosted ERP, DMARC RUA guard, and read-only risk shield</div>
         </div>
       </div>
     </section>
 
     <section id="ecosystem">
-      <h2>6 Pure-Free MIT Open-Source Tools (<code>#1</code>&ndash;<code>#5</code> &amp; <code>#7</code>)</h2>
-      <p class="sub">Zero commercial paywalls, zero license keys, and full local self-hosting under the MIT License.</p>
+      <h2>Engineering Portfolio by Domain</h2>
+      <p class="sub">Six MIT-licensed repositories for agent tooling, payment verification, operations, and email defense, alongside EvalShield Copilot for read-only trading risk control.</p>
 
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th>Tool (100% Free MIT)</th>
-              <th>Core Capabilities &amp; Runtime</th>
-              <th>Distribution &amp; Links</th>
+              <th>Area &amp; Project</th>
+              <th>What It Solves &amp; Key Modules</th>
+              <th>Links &amp; License</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>1. <a href="https://github.com/apexhive-hq/slimmcp-proxy" target="_blank" rel="noopener noreferrer"><code>slimmcp-proxy</code></a> (<code>v1.0.2</code>)</strong></td>
-              <td>Progressive-disclosure Meta-MCP proxy (<code>Node &ge;22.13 LTS</code>; <code>stdio</code>, <code>Streamable-HTTP</code>, <code>SSE</code>) cutting 60-tool schemas from <code>60,185 B</code> to <code>1,286 B</code> (<code>97.86%</code> initial / <code>~14,310 tok</code> saved, <code>95.10%</code> net 1-turn, <code>~737 tok</code> spent) with BM25 discovery, fail-closed secret redaction, and deny-overrides RBAC/budget guardrails.</td>
+              <td>
+                <span class="tag">AI Agent &amp; MCP Tools</span><br />
+                <strong><a href="https://github.com/apexhive-hq/slimmcp-proxy" target="_blank" rel="noopener noreferrer"><code>slimmcp-proxy</code></a> (<code>v1.0.3</code>)</strong>
+              </td>
+              <td>Stop AI agents from burning context tokens loading dozens of unused MCP tool schemas. Exposes 3 meta-tools across <code>stdio</code>, <code>Streamable-HTTP</code>, and <code>SSE</code> for BM25 discovery, lazy single-tool schema lookup, fail-closed secret redaction, isolated child env, and deny-overrides RBAC/budget rules.</td>
               <td>
                 <a href="https://github.com/apexhive-hq/slimmcp-proxy" target="_blank" rel="noopener noreferrer">GitHub</a> &bull;
                 <a href="https://www.npmjs.com/package/slimmcp-proxy" target="_blank" rel="noopener noreferrer">npm</a> &bull;
                 <a href="https://registry.modelcontextprotocol.io/v0.1/servers/io.github.apexhive-hq%2Fslimmcp-proxy/versions/latest" target="_blank" rel="noopener noreferrer">MCP Registry</a> &bull;
-                <a href="https://glama.ai/mcp/servers/apexhive-hq/slimmcp-proxy" target="_blank" rel="noopener noreferrer">Glama</a>
+                <a href="https://glama.ai/mcp/servers/apexhive-hq/slimmcp-proxy" target="_blank" rel="noopener noreferrer">Glama</a><br />
+                <span class="muted">MIT &bull; Node &ge;22.13 LTS</span>
               </td>
             </tr>
             <tr>
-              <td><strong>2. <a href="https://github.com/apexhive-hq/zerofiat-base-checkout-kit" target="_blank" rel="noopener noreferrer"><code>zerofiat-base-checkout-kit</code></a> (<code>v2.1.0</code>)</strong></td>
-              <td>Unlimited free Base Mainnet USDC (<code>eip155:8453</code>) verification rail on Cloudflare Workers (<code>Node &ge;22.18 LTS</code>) with scoped <code>TxClaimLockDO</code> isolation, EOA (<code>EIP-191</code>) + Smart Wallet (<code>ERC-1271</code> / <code>EIP-6492</code>) verification, and strict <code>409</code> anti-replay.</td>
               <td>
-                <a href="https://github.com/apexhive-hq/zerofiat-base-checkout-kit" target="_blank" rel="noopener noreferrer">GitHub</a> &bull;
-                <a href="https://zerofiat-base-checkout-kit.apexhive-hq.workers.dev" target="_blank" rel="noopener noreferrer">Reference Worker</a>
+                <span class="tag">AI Agent &amp; MCP Tools</span><br />
+                <strong><a href="https://github.com/apexhive-hq/mcp-doctor" target="_blank" rel="noopener noreferrer"><code>mcp-doctor</code></a> (<code>v1.0.2</code>)</strong>
               </td>
-            </tr>
-            <tr>
-              <td><strong>3. <a href="https://github.com/apexhive-hq/web3-ops-automation-pack" target="_blank" rel="noopener noreferrer"><code>web3-ops-automation-pack</code></a> (<code>v1.0.1</code>)</strong></td>
-              <td>Strict <code>BigInt</code> Base &amp; <code>finalized</code> Solana USDC verifiers in TypeScript (<code>Node &ge;22.18 LTS</code>) &amp; Python (<code>3.12+</code>), Playwright mock EIP-1193 checkout QA harness, and fail-closed HMAC-authenticated n8n webhook templates.</td>
-              <td><a href="https://github.com/apexhive-hq/web3-ops-automation-pack" target="_blank" rel="noopener noreferrer">GitHub</a></td>
-            </tr>
-            <tr>
-              <td><strong>4. <a href="https://github.com/apexhive-hq/mcp-doctor" target="_blank" rel="noopener noreferrer"><code>mcp-doctor</code></a> (<code>v1.0.1</code>)</strong></td>
-              <td>Static regex-based security &amp; context-tax MCP CLI linter (<code>Node &ge;20 LTS</code>) with <code>A&ndash;F</code> score grading, masked secret evidence, isolated stdio env, SARIF 2.1.0 output, <code>--policy</code>, and <code>--ci</code>.</td>
+              <td>Static CI security and context-tax linter for MCP server configs and tool schemas. Flags prompt-injection patterns, leaked credentials (masked secret evidence), untyped/bloated schemas, and policy violations with <code>A&ndash;F</code> grading, isolated stdio env, SARIF 2.1.0 output, <code>--policy</code>, and <code>--ci</code>.</td>
               <td>
                 <a href="https://github.com/apexhive-hq/mcp-doctor" target="_blank" rel="noopener noreferrer">GitHub</a> &bull;
-                <a href="https://www.npmjs.com/package/apexhive-mcp-doctor" target="_blank" rel="noopener noreferrer">npm</a>
+                <a href="https://www.npmjs.com/package/apexhive-mcp-doctor" target="_blank" rel="noopener noreferrer">npm</a><br />
+                <span class="muted">MIT &bull; Node &ge;20 LTS</span>
               </td>
             </tr>
             <tr>
-              <td><strong>5. <a href="https://github.com/apexhive-hq/open-center-os" target="_blank" rel="noopener noreferrer"><code>open-center-os</code></a> (<code>v2.2.0</code>)</strong></td>
-              <td><strong>Self-Hosted SME ERP Module</strong> (<code>Node &ge;24</code> for <code>node:sqlite</code>): multi-branch SME &amp; education center ERP with <code>scrypt</code> password hashing, SQLite session revocation, trilingual UI (EN/繁中/簡中) &amp; bilingual EN/ZH receipts, POS, timetable, QR check-in, and unlimited free branches.</td>
-              <td><a href="https://github.com/apexhive-hq/open-center-os" target="_blank" rel="noopener noreferrer">GitHub</a></td>
+              <td>
+                <span class="tag">Payments &amp; Web3 Ops</span><br />
+                <strong><a href="https://github.com/apexhive-hq/zerofiat-base-checkout-kit" target="_blank" rel="noopener noreferrer"><code>zerofiat-base-checkout-kit</code></a> (<code>v2.1.0</code>)</strong>
+              </td>
+              <td>Non-custodial Base Mainnet USDC (<code>eip155:8453</code>) payment verification on Cloudflare Workers with EOA (<code>EIP-191</code>) + Smart Wallet (<code>ERC-1271</code> / <code>EIP-6492</code>) signature proofs, scoped <code>TxClaimLockDO</code> anti-replay locks (<code>409</code> on replay), and offline Ed25519 receipts.</td>
+              <td>
+                <a href="https://github.com/apexhive-hq/zerofiat-base-checkout-kit" target="_blank" rel="noopener noreferrer">GitHub</a> &bull;
+                <a href="https://zerofiat-base-checkout-kit.apexhive-hq.workers.dev" target="_blank" rel="noopener noreferrer">Reference Worker</a><br />
+                <span class="muted">MIT &bull; Node &ge;22.18 LTS</span>
+              </td>
             </tr>
             <tr>
-              <td><strong>7. <a href="https://github.com/apexhive-hq/dmarczero" target="_blank" rel="noopener noreferrer"><code>dmarczero</code></a> (<code>v1.0.0</code>)</strong></td>
-              <td>Zero-dependency DNS/DMARC/TLS anti-drift guard &amp; streaming <code>RUA</code> aggregate analyzer (strictly rejects <code>RUF</code> forensic PII; <code>Node &ge;20 LTS</code> CLI / <code>&ge;22.13</code> BYO Worker) + authenticated self-hosted Cloudflare Email Worker + customizable white-label HTML report.</td>
-              <td><a href="https://github.com/apexhive-hq/dmarczero" target="_blank" rel="noopener noreferrer">GitHub</a></td>
+              <td>
+                <span class="tag">Payments &amp; Web3 Ops</span><br />
+                <strong><a href="https://github.com/apexhive-hq/web3-ops-automation-pack" target="_blank" rel="noopener noreferrer"><code>web3-ops-automation-pack</code></a> (<code>v1.0.1</code>)</strong>
+              </td>
+              <td>Four ready-to-use verification and QA modules: strict <code>BigInt</code> Base USDC watcher, <code>finalized</code> Solana SPL USDC verifier (TypeScript &amp; Python), Playwright EIP-1193 checkout QA harness, and fail-closed HMAC-authenticated n8n webhook templates.</td>
+              <td>
+                <a href="https://github.com/apexhive-hq/web3-ops-automation-pack" target="_blank" rel="noopener noreferrer">GitHub</a><br />
+                <span class="muted">MIT &bull; Node &ge;22.18 LTS / Python 3.12+</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="tag">Operations &amp; Email Defense</span><br />
+                <strong><a href="https://github.com/apexhive-hq/open-center-os" target="_blank" rel="noopener noreferrer"><code>open-center-os</code></a> (<code>v2.2.0</code>)</strong>
+              </td>
+              <td><strong>Self-hosted multi-branch ERP</strong> for schools, studios, and service centers: student &amp; CRM trial leads, weekly class timetables, QR check-in passes, POS invoicing &amp; refunds, multi-branch revenue analytics, trilingual UI (EN/繁中/簡中) &amp; bilingual EN/ZH receipts, and <code>scrypt</code> + SQLite session revocation.</td>
+              <td>
+                <a href="https://github.com/apexhive-hq/open-center-os" target="_blank" rel="noopener noreferrer">GitHub</a><br />
+                <span class="muted">MIT &bull; Node &ge;24</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="tag">Operations &amp; Email Defense</span><br />
+                <strong><a href="https://github.com/apexhive-hq/dmarczero" target="_blank" rel="noopener noreferrer"><code>dmarczero</code></a> (<code>v1.0.0</code>)</strong>
+              </td>
+              <td>Zero-dependency DNS/DMARC/TLS anti-drift guard and streaming <code>RUA</code> aggregate analyzer (strictly rejects <code>RUF</code> forensic PII), paired with an authenticated self-hosted Cloudflare Email Worker and customizable white-label HTML security reports.</td>
+              <td>
+                <a href="https://github.com/apexhive-hq/dmarczero" target="_blank" rel="noopener noreferrer">GitHub</a><br />
+                <span class="muted">MIT &bull; Node &ge;20 CLI / &ge;22.13 Worker</span>
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <section id="flagship">
-      <h2>Sole Commercial Flagship (<code>#6 evalshield-copilot v3.0.2</code>)</h2>
-      <p class="sub">Strictly read-only cross-market futures &amp; prop-firm risk shield under the <strong>ApexHive Dual Source-Available License</strong>: <strong>Solo 0 USDC Forever &bull; Team Early-Bird 99 USDC &bull; Enterprise Early-Bird 499 USDC</strong> (zero broker API keys, zero automated order placement).</p>
+    <section id="evalshield">
+      <h2>Trading Risk Control &mdash; EvalShield Copilot (<code>v3.0.2</code>)</h2>
+      <p class="sub"><strong>EvalShield Copilot &mdash; Read-Only Prop-Firm &amp; Futures Risk Shield</strong>. Calculates drawdown limits, position sizing, cross-account hedging, and macro blackouts locally or on Cloudflare without broker API keys or automated order placement.</p>
 
       <div class="cards-2">
         <div class="panel">
-          <span class="tag tag-cloud">ApexHive Dual Source-Available License &bull; Solo 0 USDC Forever</span>
+          <span class="tag tag-cloud">Trading Risk Control &bull; Read-Only</span>
           <h3><code>evalshield-copilot</code> (<code>v3.0.2</code>)</h3>
-          <p class="muted">
-            Rule-based cross-market risk evaluation engine free forever for Solo traders (1 person): trailing drawdowns (Topstep, Apex, MFFU, FTMO 1&amp;2-Step, Tradeify), CME Futures (<code>ES/NQ/GC/CL</code>), Gold (<code>XAUUSD</code> rollover R-drag), FX, and Crypto Perps (<code>BTC/ETH/SOL</code> incl. <code>SOL-PERP</code>), Cross-Account Anti-Hedge Portfolio Guard, Pre-Trade Thesis Journal (<code>node:sqlite</code>), Hyperliquid &amp; Polymarket 15s Brief, verified <code>2026&ndash;2027</code> official Fed FOMC / BLS CPI / BLS NFP blackout schedule with US DST accuracy, <strong>25,000-run Monte Carlo</strong> simulator, and 1-click <code>deploy/cloudflare-byo/</code> fail-closed BYO webhook kit.
-          </p>
-          <div class="cta-row cta-row-tight">
-            <a class="btn btn-primary" href="https://evalshield-copilot.apexhive-hq.workers.dev/" target="_blank" rel="noopener noreferrer">Open EvalShield Cloud</a>
-            <a class="btn" href="https://github.com/apexhive-hq/evalshield-copilot" target="_blank" rel="noopener noreferrer">Inspect Source (Dual License)</a>
+          <ul class="list-clean">
+            <li><strong>Drawdown Guard:</strong> Trailing, EOD, and static drawdown checks for Topstep, Apex, MFFU, FTMO (1&amp;2-Step), and Tradeify rules.</li>
+            <li><strong>Cross-Market Sizer:</strong> Position sizing and cost drag across CME Futures (<code>ES/NQ/GC/CL</code>), Gold (<code>XAUUSD</code>), FX, and Crypto Perps (<code>BTC/ETH/SOL</code> incl. <code>SOL-PERP</code>).</li>
+            <li><strong>Portfolio Anti-Hedge Check:</strong> Detects cross-account offsetting positions and correlated beta exposure before entry.</li>
+            <li><strong>Trade Journal:</strong> Local <code>node:sqlite</code> pre-trade thesis log and broker CSV import/export.</li>
+            <li><strong>Macro Event Calendar:</strong> Verified <code>2026&ndash;2027</code> Fed FOMC, BLS CPI, and BLS NFP blackout schedule with US DST accuracy plus 15s Hyperliquid/Polymarket briefs.</li>
+            <li><strong>25,000-Run Monte Carlo &amp; Alert Webhook:</strong> Risk-of-ruin simulator plus fail-closed BYO Cloudflare Worker (<code>deploy/cloudflare-byo/</code>) and DNS-validated IPv4/IPv6 SSRF protection.</li>
+          </ul>
+          <div class="cta-row cta-row-spaced">
+            <a class="btn btn-primary" href="https://evalshield-copilot.apexhive-hq.workers.dev/" target="_blank" rel="noopener noreferrer">Open EvalShield Copilot</a>
+            <a class="btn" href="https://github.com/apexhive-hq/evalshield-copilot" target="_blank" rel="noopener noreferrer">Inspect Source</a>
           </div>
         </div>
 
         <div class="panel">
-          <span class="tag">Commercial Tiers &amp; Security Controls</span>
-          <h3>Licensing &amp; Safeguards</h3>
+          <span class="tag">Licensing &amp; Entitlements</span>
+          <h3>ApexHive Dual Source-Available License</h3>
+          <p class="muted">
+            Solo local use: Free &middot; Team: $99 USDC &middot; Enterprise: $499 USDC
+          </p>
           <ul class="list-clean">
-            <li><strong>Solo Personal (1 person):</strong> <code>0 USDC</code> forever — full local CLI/Web rule-based risk engine, public <code>25,000</code>-run sandbox, and self-hosted <code>deploy/cloudflare-byo/</code> template.</li>
-            <li><strong>Commercial Team (2&ndash;99 seats):</strong> <code>99 USDC</code> Early-Bird one-time Base Mainnet USDC payment for an official Ed25519 entitlement (<code>EVALSHIELD-PRO-v1</code> token + <code>evalshield-copilot-entitlement.json</code> + HTML certificate) + hosted relay access.</li>
-            <li><strong>Commercial Enterprise (100+ seats):</strong> <code>499 USDC</code> Early-Bird one-time Base USDC license with organization-wide seats and redistribution entitlement.</li>
-            <li><strong>Built-in Protections:</strong> DNS-validated IPv4/IPv6 SSRF protection on connectors, fail-closed webhook secrets, and strictly read-only analytics (<a href="/refund.html">Refund Policy</a>).</li>
+            <li><strong>Solo Personal (1 person):</strong> Free for local CLI/Web risk evaluation, public <code>25,000</code>-run sandbox, and self-hosted <code>deploy/cloudflare-byo/</code> alerts.</li>
+            <li><strong>Team (2&ndash;99 seats):</strong> <code>99 USDC</code> one-time Base Mainnet USDC checkout issuing an Ed25519 entitlement (<code>EVALSHIELD-PRO-v1</code> token + <code>evalshield-copilot-entitlement.json</code> + HTML certificate) and hosted relay access.</li>
+            <li><strong>Enterprise (100+ seats):</strong> <code>499 USDC</code> one-time Base USDC license covering organization-wide seats and redistribution rights.</li>
+            <li><strong>Policies:</strong> Strictly read-only risk math; see <a href="/terms.html">Terms</a> and <a href="/refund.html">Refund Policy</a>.</li>
           </ul>
         </div>
       </div>
@@ -151,7 +192,7 @@
 
     <section id="calculator">
       <h2>Interactive <code>slimmcp-proxy</code> Context Tax Calculator</h2>
-      <p class="sub">Model both <strong>initial <code>tools/list</code> schema reduction</strong> and realistic <strong>net 1-turn lookup cost</strong> (meta-tools + 5 BM25 summaries + 1 lazy schema load = <code>+415</code> tokens lookup overhead) using <code>Math.ceil(utf8Bytes / 4)</code>. Default 60-tool fixture: <code>60 &times; 1,003 B + 5 B envelope = 60,185 B</code>.</p>
+      <p class="sub">Estimate how much prompt context <code>slimmcp-proxy</code> saves by replacing large upstream <code>tools/list</code> payloads with 3 meta-tools (<code>1,286 B</code> / <code>322</code> tokens) plus 1-turn lookup overhead (<code>+415</code> tokens for 5 BM25 summaries + 1 lazy schema load). Verified 60-tool fixture: <code>60,185 B &rarr; 1,286 B</code> (<code>97.86%</code> initial reduction; <code>15,047 &rarr; 322</code> tok; <code>60 &times; 1,003 B + 5 B envelope</code>).</p>
 
       <div class="calc-grid">
         <div class="panel">
@@ -207,7 +248,7 @@
             <strong id="outCost" class="highlight">$0.88</strong>
           </div>
           <div class="calc-note" id="outBreakEven">
-            100% Pure-Free MIT Proxy (slimmcp-proxy). Net 20-turn session savings include the 1-turn lookup overhead (~415 tokens) and support stdio, Streamable-HTTP, and SSE upstreams.
+            slimmcp-proxy (MIT). Net 20-turn session savings include the 1-turn lookup overhead (~415 tokens) and support stdio, Streamable-HTTP, and SSE upstreams.
           </div>
         </div>
       </div>
@@ -215,7 +256,7 @@
 
     <section id="architecture">
       <h2>How <code>slimmcp-proxy</code> Works Across <code>stdio</code>, HTTP &amp; SSE</h2>
-      <p class="sub">Pure Node.js <code>&ge;22.13 LTS</code> using built-in <code>node:sqlite</code> and <code>node:crypto</code> &mdash; zero Docker required, zero <code>node-gyp</code>, zero external embedding APIs.</p>
+      <p class="sub">Built on Node.js <code>&ge;22.13 LTS</code> with built-in <code>node:sqlite</code> and <code>node:crypto</code> &mdash; no Docker, native addons, or external embedding APIs required.</p>
       <div class="cards-3">
         <div class="panel">
           <h3>1. <code>discover_tools</code></h3>
@@ -233,19 +274,19 @@
     </section>
 
     <section id="install">
-      <h2>Verified Quick Start (npm <code>npx</code> &amp; GitHub Source)</h2>
-      <p class="sub">Run our MIT CLI tools directly with <code>npx</code> or clone any repository from GitHub:</p>
+      <h2>Quick Start (npm <code>npx</code> &amp; Source)</h2>
+      <p class="sub">Run our CLI tools directly with <code>npx</code> or clone any repository from GitHub:</p>
 
       <div class="code-box">
         <button class="copy-btn" type="button" data-copy="cmd-install">Copy</button>
-        <pre id="cmd-install"># 1. Run slimmcp-proxy (100% Free MIT, Node &gt;=22.13 LTS):
+        <pre id="cmd-install"># 1. Run slimmcp-proxy (MIT, Node &gt;=22.13 LTS):
 npx -y slimmcp-proxy --help
 npx -y slimmcp-proxy serve --config /path/to/mcp-servers.json
 
-# 2. Run mcp-doctor static MCP CI linter (100% Free MIT, Node &gt;=20 LTS):
+# 2. Run mcp-doctor static MCP CI linter (MIT, Node &gt;=20 LTS):
 npx -y apexhive-mcp-doctor status
 
-# 3. Clone &amp; run verified 60-tool benchmark from source:
+# 3. Clone &amp; run the 60-tool benchmark from source:
 git clone https://github.com/apexhive-hq/slimmcp-proxy.git
 cd slimmcp-proxy/cli
 pnpm install --ignore-scripts
@@ -266,14 +307,14 @@ pnpm run typecheck &amp;&amp; pnpm test &amp;&amp; pnpm run benchmark</pre>
       </div>
 
       <div class="notice">
-        <strong>Governance &amp; Support:</strong> Tools <code>#1</code>&ndash;<code>#5</code> and <code>#7</code> are 100% Pure-Free MIT open source with no donation prompts or paywalls. Commercial licensing applies solely to <code>#6 evalshield-copilot</code> Team/Enterprise tiers. Support: <a href="mailto:apexhive.hq@proton.me">apexhive.hq@proton.me</a> &bull; <a href="/terms.html">Terms</a> &bull; <a href="/privacy.html">Privacy</a> &bull; <a href="/refund.html">Commercial Refund Policy</a>.
+        <strong>Support &amp; Policies:</strong> <code>slimmcp-proxy</code>, <code>mcp-doctor</code>, <code>zerofiat-base-checkout-kit</code>, <code>web3-ops-automation-pack</code>, <code>open-center-os</code>, and <code>dmarczero</code> are MIT-licensed open source; commercial team/enterprise licensing applies to <code>evalshield-copilot</code>. Contact: <a href="mailto:apexhive.hq@proton.me">apexhive.hq@proton.me</a> &bull; <a href="/terms.html">Terms</a> &bull; <a href="/privacy.html">Privacy</a> &bull; <a href="/refund.html">Refund Policy</a>.
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <div><strong>ApexHive Labs</strong> &bull; 6 Pure-Free MIT Tools (#1&ndash;#5, #7) + 1 Commercial Flagship (#6) &bull; Zero Telemetry / Zero Cookies.</div>
+      <div><strong>ApexHive Labs</strong> &bull; AI Agent &amp; MCP Tools, Payments &amp; Web3 Ops, Operations &amp; Email Defense, Trading Risk Control &bull; Zero Telemetry / Zero Cookies.</div>
       <div class="footer-row">
         Machine-readable summary: <a href="/llms.txt">/llms.txt</a> &bull;
         GitHub Portfolio: <a href="https://github.com/apexhive-hq" target="_blank" rel="noopener noreferrer">GitHub (@apexhive-hq)</a> &bull;
@@ -283,7 +324,7 @@ pnpm run typecheck &amp;&amp; pnpm test &amp;&amp; pnpm run benchmark</pre>
       <div class="footer-row">
         Policies: <a href="/terms.html">Terms of Use</a> &bull;
         <a href="/privacy.html">Privacy (Zero Telemetry)</a> &bull;
-        <a href="/refund.html">Commercial Refund Policy</a> &bull;
+        <a href="/refund.html">Refund Policy</a> &bull;
         Contact: <a href="mailto:apexhive.hq@proton.me">apexhive.hq@proton.me</a>
       </div>
     </div>

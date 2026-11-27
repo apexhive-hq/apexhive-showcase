@@ -96,10 +96,10 @@ async function waitForWranglerReady(url, proc, getLogs, timeoutMs = 45000) {
 }
 
 /**
- * Check markdown/html doc strings for zero contradictions, zero tip wallets, and full #1-#7 alignment.
+ * Check markdown/html doc strings for zero contradictions, zero promo hype, zero tip wallets, zero internal IDs, and portfolio alignment.
  * @param {string} content
  * @param {string} label
- * @param {'full' | 'readme' | 'legal'} [mode]
+ * @param {'full' | 'profile' | 'readme' | 'legal'} [mode]
  */
 function assertPortfolioHygiene(content, label, mode = 'full') {
   assert.doesNotMatch(
@@ -116,6 +116,16 @@ function assertPortfolioHygiene(content, label, mode = 'full') {
     content,
     /GitHub Org|ApexHive Holdings|MIT Core|polymarket-paper|10,000-run|10k Monte Carlo|300-point|SVG badge|x402 API|0x32eceaC45DBED9E555dAb80346aBd4Ab9C676206|\.lic\b/i,
     `${label} must not contain contradicted entity/license/metric/tip-wallet/.lic strings`,
+  );
+  assert.doesNotMatch(
+    content,
+    /Pure-Free|100% Free|Unlimited free|Zero Paywalls|Sole Commercial Flagship|Commercial Flagship|Hosted Cloud Flagship|Early-Bird|Forever\b/i,
+    `${label} must not contain banned promotional hype wording`,
+  );
+  assert.doesNotMatch(
+    content,
+    /#[1-7](?![0-9a-fA-F])|Tools\s+#[1-7]|<strong>[1-7]\.\s*<a|SME ERP Module/i,
+    `${label} must not contain internal #1-#7 jump numbers or legacy SME ERP Module wording`,
   );
   assert.doesNotMatch(
     content,
@@ -160,6 +170,25 @@ function assertPortfolioHygiene(content, label, mode = 'full') {
           'privacy.html',
           'refund.html',
         ]
+      : mode === 'profile'
+        ? [
+            'slimmcp-proxy',
+            'zerofiat-base-checkout-kit',
+            'web3-ops-automation-pack',
+            'mcp-doctor',
+            'open-center-os',
+            'dmarczero',
+            'evalshield-copilot',
+            'https://evalshield-copilot.apexhive-hq.workers.dev/',
+            'ApexHive Dual Source-Available License',
+            'Drawdown Guard',
+            'BM25',
+            '@apexhive-hq',
+            'apexhive.hq@proton.me',
+            'terms.html',
+            'privacy.html',
+            'refund.html',
+          ]
       : mode === 'readme'
         ? [
             'slimmcp-proxy',
@@ -180,7 +209,7 @@ function assertPortfolioHygiene(content, label, mode = 'full') {
   }
 }
 
-test('Static portfolio files satisfy 6-MIT + 1-Flagship hygiene, security headers, and XSS rules', () => {
+test('Static portfolio files satisfy 4-domain feature-first hygiene, security headers, LICENSE, and XSS rules', () => {
   const indexHtml = readFileSync(join(SITE_DIR, 'index.html'), 'utf8');
   const termsHtml = readFileSync(join(SITE_DIR, 'terms.html'), 'utf8');
   const privacyHtml = readFileSync(join(SITE_DIR, 'privacy.html'), 'utf8');
@@ -215,7 +244,7 @@ test('Static portfolio files satisfy 6-MIT + 1-Flagship hygiene, security header
 
   if (existsSync(PROFILE_README)) {
     const profileMd = readFileSync(PROFILE_README, 'utf8');
-    assertPortfolioHygiene(profileMd, 'apexhive-profile/README.md', 'full');
+    assertPortfolioHygiene(profileMd, 'apexhive-profile/README.md', 'profile');
   }
 
   for (const [name, src] of [
@@ -310,7 +339,7 @@ test('Wrangler Pages dev serves showcase + legal pages with security headers and
 
     assert.equal(llmsRes.status, 200);
     const llmsBody = await llmsRes.text();
-    assert.match(llmsBody, /6 Pure-Free MIT Tools/i);
+    assert.match(llmsBody, /AI Agent & MCP Tools/i);
     assert.match(llmsBody, /dmarczero/);
     assert.match(llmsBody, /evalshield-copilot\.apexhive-hq\.workers\.dev/);
     assert.equal(robotsRes.status, 200);
@@ -338,14 +367,14 @@ test('Wrangler Pages dev serves showcase + legal pages with security headers and
     await page.goto(baseUrl, { waitUntil: 'networkidle' });
 
     const heading = await page.locator('h1').textContent();
-    assert.match(heading ?? '', /Pure-Free MIT agent, email, and Web3 tools/i);
+    assert.match(heading ?? '', /Practical infrastructure for AI agents, Web3 payments, operations, and trading risk/i);
 
-    for (const id of ['ecosystem', 'flagship', 'calculator', 'architecture', 'install']) {
+    for (const id of ['ecosystem', 'evalshield', 'calculator', 'architecture', 'install']) {
       assert.equal(await page.locator(`#${id}`).isVisible(), true, `Section #${id} must be visible`);
     }
 
     const bodyText = (await page.locator('body').textContent()) ?? '';
-    for (const toolName of [
+    for (const expectedText of [
       'slimmcp-proxy',
       'zerofiat-base-checkout-kit',
       'web3-ops-automation-pack',
@@ -353,8 +382,10 @@ test('Wrangler Pages dev serves showcase + legal pages with security headers and
       'open-center-os',
       'dmarczero',
       'evalshield-copilot',
+      'EvalShield Copilot — Read-Only Prop-Firm & Futures Risk Shield',
+      'Solo local use: Free · Team: $99 USDC · Enterprise: $499 USDC',
     ]) {
-      assert.ok(bodyText.includes(toolName), `Showcase body must include ${toolName}`);
+      assert.ok(bodyText.includes(expectedText), `Showcase body must include: ${expectedText}`);
     }
 
     // Verify all href links are clean
@@ -388,7 +419,7 @@ test('Wrangler Pages dev serves showcase + legal pages with security headers and
     assert.equal(await page.locator('#outPerTurn').textContent(), '14,725 tokens');
     assert.equal(await page.locator('#outPerSession').textContent(), '294,085 tokens');
     assert.equal(await page.locator('#outCost').textContent(), '$0.88');
-    assert.match((await page.locator('#outBreakEven').textContent()) ?? '', /100% Pure-Free MIT Proxy/i);
+    assert.match((await page.locator('#outBreakEven').textContent()) ?? '', /slimmcp-proxy \(MIT\)/i);
 
     // Interactive calculator update (120 tools, 40 turns, $15/1M)
     await page.locator('#toolCount').fill('120');

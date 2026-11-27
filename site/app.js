@@ -43,7 +43,7 @@
     document.getElementById("outPerSession").textContent = fmt(savedPerSession) + " tokens";
     document.getElementById("outCost").textContent = "$" + costSaved.toFixed(2);
     document.getElementById("outBreakEven").textContent =
-      "100% Pure-Free MIT Proxy (slimmcp-proxy). Net " +
+      "slimmcp-proxy (MIT). Net " +
       fmt(turns) +
       "-turn session savings include the 1-turn lookup overhead (~415 tokens) and support stdio, Streamable-HTTP, and SSE upstreams.";
   }
